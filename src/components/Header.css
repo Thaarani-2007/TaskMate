@@ -1,0 +1,177 @@
+:root {
+    --text-color: #fff;
+  }
+  
+  /* Theme Gradients with Animation */
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Apply to whole page */
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+    min-height: 100vh;
+  }
+  
+  /* Themes */
+  :root {
+    --text-color: #fff;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-border: rgba(255, 255, 255, 0.2);
+    --input-focus: #fbc2eb;
+  }
+  
+  /* Space */
+  [data-theme='space'] {
+    --bg: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+    --title-gradient: linear-gradient(to right, #ffffff, #9c27b0);
+    --input-bg: rgba(35, 58, 75, 0.25);
+    --input-border: rgba(140, 180, 255, 0.25);
+    --input-focus: #82b1ff;
+    --text-color: #e0f7fa;
+  }
+  
+  /* Dream */
+  [data-theme='clinical'] {
+    --bg: linear-gradient(145deg, #f0f4f8, #d9e2ec);
+    --title-gradient: linear-gradient(to right, #2f80ed, #56ccf2);
+    --input-bg: rgba(220, 235, 245, 0.4);
+    --input-border: rgba(160, 190, 210, 0.3);
+    --input-focus: #4098d7;
+    --text-color: #2d3a45;
+  }
+  
+  /* Sunset */
+  [data-theme='blueprint'] {
+    --bg: linear-gradient(-45deg, #fdfcfb, #e2d1f9);
+  --title-gradient: linear-gradient(to right, #ff758c, #ff7eb3);
+  --input-bg: rgba(245, 228, 255, 0.4);
+  --input-border: rgba(200, 180, 210, 0.25);
+  --input-focus: #c084fc;
+  --text-color: #3e3e3e;
+  }
+  
+  /* Aqua */
+  [data-theme='mocha'] {
+    --bg: linear-gradient(135deg, #c2b280, #a47551, #7b5e42, #c2b280);
+    --title-gradient: linear-gradient(to right, #5d4037, #8d6e63);
+    --input-bg: rgba(121, 85, 72, 0.3);
+    --input-border: rgba(100, 60, 45, 0.3);
+    --input-focus: #a1887f;
+    --text-color: #3e2723;
+  }
+
+   
+  
+  
+  /* Midnight */
+  [data-theme='midnight'] {
+    --bg: linear-gradient(-45deg, #232526, #414345, #1c1c1c, #232526);
+    --title-gradient: linear-gradient(to right, #00f2fe, #4facfe);
+    --input-bg: rgba(50, 50, 60, 0.3);
+    
+  }
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: transparent;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Title with Gradient */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .gradient-title {
+    background: var(--title-gradient);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    animation: gradientFlow 10s ease infinite;
+  
+    background-clip: text;              /* ✅ Standard */
+    -webkit-background-clip: text;      /* ✅ WebKit (Chrome/Safari) */
+    -webkit-text-fill-color: transparent;
+    color: var(--text-color);           /* Fallback */
+  }
+  
+  /* Theme Switcher */
+  .theme-switcher {
+    display: flex;
+    gap: 0.7rem;
+  }
+  
+  .theme-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+  }
+  
+  .theme-circle:hover {
+    transform: scale(1.2);
+  }
+  
+  .theme-circle.active {
+    border: 2px solid #fff;
+  }
+  
+  /* Color previews */
+  .theme-circle.space {
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+  }
+  .theme-circle.clinical {
+    background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+  }
+  .theme-circle.blueprint {
+    background: linear-gradient(135deg, #cfd9e9, #90a4d4, #3f51b5);
+  }
+  .theme-circle.mocha {
+    background: linear-gradient(135deg, #f5efe6, #e3d5ca, #d5bda0);
+  }
+  .theme-circle.midnight {
+    background: linear-gradient(45deg, #232526, #414345);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.05); /* slight translucent */
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  

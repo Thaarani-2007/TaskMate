@@ -1,0 +1,152 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* pastel gradient */
+  color: #333;
+  min-height: 100vh;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+/* Scrollbar (Cute and Minimal) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background :var(--bg);
+  border-radius: 4px;
+}
+
+/* Container */
+.app {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff0f6;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(248, 165, 194, 0.25);
+  padding: 2rem;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Headings */
+h1, h2 {
+  color: #c44569;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #f8a5c2;
+  background-color: #fff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #c44569;
+  box-shadow: 0 0 5px #f8a5c2;
+}
+
+/* Buttons */
+button {
+  background-color: #f78fb3;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #f38fb3d2;
+  transform: scale(1.05);
+}
+
+/* Task List */
+ul.task-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+li.task-item {
+  background-color: #ffe5ec;
+  padding: 1rem;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+li.task-item.completed {
+  background-color: #e0c3fc;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+li.task-item span {
+  font-weight: 500;
+  color: #6a0572;
+}
+
+/* Cute checkbox */
+input[type="checkbox"] {
+  accent-color: #f78fb3;
+  transform: scale(1.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .app {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  color: var(--text-color);
+  transition: all 0.5s ease-in-out;
+  min-height: 100vh;
+}

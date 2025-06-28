@@ -1,0 +1,219 @@
+.AddTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: var(--bg); 
+}
+
+.AddTask form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  padding: 2rem;
+  width: 85%;
+  max-width: 700px;
+  border-radius: 16px;
+  background: var(--bg); /* uses current theme background */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.AddTask input,
+.AddTask select,
+.AddTask button,
+.AddTask .reset {
+  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2); /* blends subtly */
+  color: var(--text-color);
+  transition: 0.2s ease;
+}
+.AddTask .reset {
+  align-self: start;    /* same padding as button */
+}
+
+.AddTask input::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.AddTask input:focus,
+.AddTask select:focus {
+  outline: none;
+  box-shadow: 0 0 6px var(--text-color);
+}
+
+.AddTask button,
+.AddTask .reset {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.AddTask button:hover,
+.AddTask .reset:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+input[type="datetime-local"] {
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  outline: none;
+}
+
+input[type="datetime-local"]:hover {
+  border-color: #aaa;
+}
+
+input[type="datetime-local"]:focus {
+  border-color: #fbc2eb;
+  box-shadow: 0 0 5px #fbc2eb;
+}
+/* Input Field */
+.custom-date-input {
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 2px solid var(--text-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.custom-date-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-date-input:focus {
+  border-color: #fbc2eb;
+  box-shadow: 0 0 8px #fbc2eb99;
+}
+
+/* Main popup */
+.react-datepicker {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  color: var(--text-color);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header with gradient */
+.react-datepicker__header {
+  background: var(--bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+}
+
+/* Current month and year */
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Days */
+.react-datepicker__day,
+.react-datepicker__day-name,
+.react-datepicker__time-name {
+  color: var(--text-color);
+}
+
+/* Selected/hovered day */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #fbc2eb;
+  color: black;
+  border-radius: 8px;
+}
+
+.react-datepicker__day:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Time List */
+.react-datepicker__time-list-item {
+  color: black;
+  background-color: var(--bg);
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+/* Highlight on hover */
+.react-datepicker__time-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Selected time styling */
+.react-datepicker__time-list-item--selected {
+  background-color: #fbc2eb;
+  color: black; /* ✅ readable over pink background */
+  font-weight: bold;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.time-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.time-required p{
+  padding:10px;
+}
+
+.time-wrapper {
+  position: relative;
+  width: 80px;
+}
+
+.time-wrapper input {
+  width: 100%;
+  padding: 0.7rem 1.8rem 0.7rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+.unit-label {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  font-family: 'Poppins', sans-serif;
+}

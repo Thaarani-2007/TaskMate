@@ -1,0 +1,64 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-color: #f9f9f9;
+    --button-bg: #007bff;
+    --button-text: #ffffff;
+  }
+  
+  [data-theme='dark'] {
+    --bg-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --card-color: #2a2a2a;
+    --button-bg: #4444aa;
+    --button-text: #ffffff;
+  }
+  
+  [data-theme='pastel'] {
+    --bg-color: #fff0f5;
+    --text-color: #5c5c5c;
+    --card-color: #ffe4ec;
+    --button-bg: #f9b4c6;
+    --button-text: #333;
+  }
+  
+  /* Add more theme styles here... */
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Use variables elsewhere too */
+  button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  section, .card, .task-item {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1; }
